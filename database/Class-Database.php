@@ -13,9 +13,9 @@ $conn = mysqli_connect($servername, $username, $password);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-// $query = mysqli_query($conn, "SELECT * FROM users");
-// $row = mysqli_fetch_row($query);
-// var_dump($row);
-// echo "Connected successfully";
+$query = mysqli_query($conn, "SELECT * FROM users");
+$row = mysqli_fetch_row($query);
+var_dump($row);
+echo "Connected successfully";
 mysqli_select_db($conn, $db);
 ?>
